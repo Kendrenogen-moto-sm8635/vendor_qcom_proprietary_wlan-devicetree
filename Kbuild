@@ -78,8 +78,11 @@ dtbo-y += sun-peach-cnss-v8.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_CLIFFS),y)
+ifeq ($(CONFIG_MOT_CNSS_KIWI_V2),y)
 dtbo-y += cliffs-kiwi-cnss.dtbo
+else
 dtbo-y += cliffs-qca6750.dtbo
+endif
 endif
 
 ifeq ($(CONFIG_ARCH_MONACO),y)
